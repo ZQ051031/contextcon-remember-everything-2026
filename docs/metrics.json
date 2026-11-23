@@ -1,0 +1,311 @@
+{
+  "mode": "offline-demo",
+  "warmupRunsPerMode": 6,
+  "summary": {
+    "shared": {
+      "runs": 12,
+      "meanEstimatedTokens": 1009.8333333333334,
+      "meanLatencyMs": 0.4742396666666669,
+      "meanCoveragePercent": 100,
+      "meanRelevance": 0.23426904261734757
+    },
+    "baseline": {
+      "runs": 12,
+      "meanEstimatedTokens": 50474.333333333336,
+      "meanLatencyMs": 2.0632041666666674,
+      "meanCoveragePercent": 100,
+      "meanRelevance": null
+    }
+  },
+  "tokenReductionPercent": 97.99931318227746,
+  "runs": [
+    {
+      "topic": "shared-memory",
+      "pass": 1,
+      "question": "How does shared memory help multi-agent systems?",
+      "first": "baseline",
+      "baseline": {
+        "inputTokens": 32564,
+        "outputTokens": 442,
+        "tokens": 33006,
+        "latencyMs": 1.1229349999999982,
+        "quality": 100,
+        "meanRelevance": null,
+        "reused": 0
+      },
+      "shared": {
+        "inputTokens": 554,
+        "outputTokens": 447,
+        "tokens": 1001,
+        "latencyMs": 0.5320180000000008,
+        "quality": 100,
+        "meanRelevance": 0.2465993927363093,
+        "reused": 5
+      }
+    },
+    {
+      "topic": "token-retrieval",
+      "pass": 1,
+      "question": "How can retrieval reduce context tokens without losing quality?",
+      "first": "shared",
+      "baseline": {
+        "inputTokens": 35746,
+        "outputTokens": 451,
+        "tokens": 36197,
+        "latencyMs": 1.5815570000000037,
+        "quality": 100,
+        "meanRelevance": null,
+        "reused": 0
+      },
+      "shared": {
+        "inputTokens": 570,
+        "outputTokens": 457,
+        "tokens": 1027,
+        "latencyMs": 0.40532400000000024,
+        "quality": 100,
+        "meanRelevance": 0.17445134027493145,
+        "reused": 5
+      }
+    },
+    {
+      "topic": "datapacks",
+      "pass": 1,
+      "question": "How should agents use Meko datapacks for shared research?",
+      "first": "baseline",
+      "baseline": {
+        "inputTokens": 39031,
+        "outputTokens": 459,
+        "tokens": 39490,
+        "latencyMs": 1.7620369999999994,
+        "quality": 100,
+        "meanRelevance": null,
+        "reused": 0
+      },
+      "shared": {
+        "inputTokens": 594,
+        "outputTokens": 464,
+        "tokens": 1058,
+        "latencyMs": 0.4615659999999977,
+        "quality": 100,
+        "meanRelevance": 0.2965735262301868,
+        "reused": 5
+      }
+    },
+    {
+      "topic": "traces",
+      "pass": 1,
+      "question": "What belongs in an auditable agent decision trace?",
+      "first": "shared",
+      "baseline": {
+        "inputTokens": 42210,
+        "outputTokens": 428,
+        "tokens": 42638,
+        "latencyMs": 1.6892390000000006,
+        "quality": 100,
+        "meanRelevance": null,
+        "reused": 0
+      },
+      "shared": {
+        "inputTokens": 552,
+        "outputTokens": 434,
+        "tokens": 986,
+        "latencyMs": 0.5994019999999978,
+        "quality": 100,
+        "meanRelevance": 0.20170695889278856,
+        "reused": 5
+      }
+    },
+    {
+      "topic": "learnings",
+      "pass": 1,
+      "question": "How can agents verify and reuse durable learnings?",
+      "first": "baseline",
+      "baseline": {
+        "inputTokens": 45295,
+        "outputTokens": 434,
+        "tokens": 45729,
+        "latencyMs": 1.805464999999998,
+        "quality": 100,
+        "meanRelevance": null,
+        "reused": 0
+      },
+      "shared": {
+        "inputTokens": 556,
+        "outputTokens": 440,
+        "tokens": 996,
+        "latencyMs": 0.8423549999999977,
+        "quality": 100,
+        "meanRelevance": 0.25824003910704774,
+        "reused": 5
+      }
+    },
+    {
+      "topic": "artifacts",
+      "pass": 1,
+      "question": "How do versioned artifacts improve research reproducibility?",
+      "first": "shared",
+      "baseline": {
+        "inputTokens": 48403,
+        "outputTokens": 431,
+        "tokens": 48834,
+        "latencyMs": 1.8450930000000056,
+        "quality": 100,
+        "meanRelevance": null,
+        "reused": 0
+      },
+      "shared": {
+        "inputTokens": 554,
+        "outputTokens": 437,
+        "tokens": 991,
+        "latencyMs": 0.32520499999999686,
+        "quality": 100,
+        "meanRelevance": 0.22804299846282167,
+        "reused": 5
+      }
+    },
+    {
+      "topic": "shared-memory",
+      "pass": 2,
+      "question": "How does shared memory help multi-agent systems?",
+      "first": "shared",
+      "baseline": {
+        "inputTokens": 51548,
+        "outputTokens": 442,
+        "tokens": 51990,
+        "latencyMs": 2.3715249999999983,
+        "quality": 100,
+        "meanRelevance": null,
+        "reused": 0
+      },
+      "shared": {
+        "inputTokens": 554,
+        "outputTokens": 447,
+        "tokens": 1001,
+        "latencyMs": 0.4585429999999988,
+        "quality": 100,
+        "meanRelevance": 0.2465993927363093,
+        "reused": 5
+      }
+    },
+    {
+      "topic": "token-retrieval",
+      "pass": 2,
+      "question": "How can retrieval reduce context tokens without losing quality?",
+      "first": "baseline",
+      "baseline": {
+        "inputTokens": 54730,
+        "outputTokens": 451,
+        "tokens": 55181,
+        "latencyMs": 3.050483,
+        "quality": 100,
+        "meanRelevance": null,
+        "reused": 0
+      },
+      "shared": {
+        "inputTokens": 570,
+        "outputTokens": 457,
+        "tokens": 1027,
+        "latencyMs": 0.436905000000003,
+        "quality": 100,
+        "meanRelevance": 0.17445134027493145,
+        "reused": 5
+      }
+    },
+    {
+      "topic": "datapacks",
+      "pass": 2,
+      "question": "How should agents use Meko datapacks for shared research?",
+      "first": "shared",
+      "baseline": {
+        "inputTokens": 58015,
+        "outputTokens": 459,
+        "tokens": 58474,
+        "latencyMs": 3.1532780000000002,
+        "quality": 100,
+        "meanRelevance": null,
+        "reused": 0
+      },
+      "shared": {
+        "inputTokens": 594,
+        "outputTokens": 464,
+        "tokens": 1058,
+        "latencyMs": 0.4140570000000068,
+        "quality": 100,
+        "meanRelevance": 0.2965735262301868,
+        "reused": 5
+      }
+    },
+    {
+      "topic": "traces",
+      "pass": 2,
+      "question": "What belongs in an auditable agent decision trace?",
+      "first": "baseline",
+      "baseline": {
+        "inputTokens": 61194,
+        "outputTokens": 428,
+        "tokens": 61622,
+        "latencyMs": 1.9237449999999967,
+        "quality": 100,
+        "meanRelevance": null,
+        "reused": 0
+      },
+      "shared": {
+        "inputTokens": 552,
+        "outputTokens": 434,
+        "tokens": 986,
+        "latencyMs": 0.4406760000000105,
+        "quality": 100,
+        "meanRelevance": 0.20170695889278856,
+        "reused": 5
+      }
+    },
+    {
+      "topic": "learnings",
+      "pass": 2,
+      "question": "How can agents verify and reuse durable learnings?",
+      "first": "shared",
+      "baseline": {
+        "inputTokens": 64279,
+        "outputTokens": 434,
+        "tokens": 64713,
+        "latencyMs": 2.0807740000000052,
+        "quality": 100,
+        "meanRelevance": null,
+        "reused": 0
+      },
+      "shared": {
+        "inputTokens": 556,
+        "outputTokens": 440,
+        "tokens": 996,
+        "latencyMs": 0.4084979999999945,
+        "quality": 100,
+        "meanRelevance": 0.25824003910704774,
+        "reused": 5
+      }
+    },
+    {
+      "topic": "artifacts",
+      "pass": 2,
+      "question": "How do versioned artifacts improve research reproducibility?",
+      "first": "baseline",
+      "baseline": {
+        "inputTokens": 67387,
+        "outputTokens": 431,
+        "tokens": 67818,
+        "latencyMs": 2.3723190000000045,
+        "quality": 100,
+        "meanRelevance": null,
+        "reused": 0
+      },
+      "shared": {
+        "inputTokens": 554,
+        "outputTokens": 437,
+        "tokens": 991,
+        "latencyMs": 0.3663269999999983,
+        "quality": 100,
+        "meanRelevance": 0.22804299846282167,
+        "reused": 5
+      }
+    }
+  ]
+}

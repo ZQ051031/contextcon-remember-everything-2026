@@ -1,0 +1,14 @@
+# Demo video script · 4:35
+
+Before recording: serve `docs/` locally or use Pages if enabled. Start in a fresh tab so the first run is cold. Use the measured values in the UI and [README](README.md#tests-and-measured-benchmark); do not rehearse hard-coded results.
+
+| Time | What to show | Exact narration |
+| --- | --- | --- |
+| 0:00–0:25 | Top of the workspace; show the Demo mode badge. | “This is ContextCon Research Collective, our entry for Challenge Eight: Do More with Fewer Tokens. Four agents share one datapack. This is the offline demo, so no API key or language model is needed.” |
+| 0:25–0:55 | Click the shared-memory example, then **Run comparison**. | “I’m giving both modes the exact same research question. Full replay rereads the corpus and conversation history at every stage. The shared-memory agents ask for relevant context before doing new work.” |
+| 0:55–1:30 | Point to the four agents; open Researcher and Summariser under **Retrieved context**. | “The Researcher finds source facts. The Summariser can pick up that handoff instead of searching the corpus again. Each returned record has a relevance score when supplied. Relevance helps rank context; it is not proof that a claim is true.” |
+| 1:30–2:05 | Show the trace, the Writer's brief, and its version and hash. | “Here’s the decision trace: which tools ran, what was saved, and how much context each agent received. The Writer turns the evidence into a cited brief. Each brief gets its own immutable version and a content hash so the exact output can be retrieved.” |
+| 2:05–2:50 | Choose **Verified learnings** in the memory browser. Run the same question again; observe reuse. | “The Analyst checks the seeded fact and citation pairs before saving a durable learning. Now I’ll ask the same question again. The Writer and Analyst can reuse that learning, and the Researcher can start from saved evidence. The trace tells us what was actually reused.” |
+| 2:50–3:30 | Compare the table for the second run; switch the trace to **Full replay**. | “The table shows measured time to brief, estimated tokens, and evidence coverage. These are context estimates, not billed model tokens. Coverage only checks the seeded reference facts. Full replay has no retrieval scores because it doesn’t do a datapack lookup.” |
+| 3:30–4:05 | Show the README benchmark and Live Meko instructions. | “The benchmark repeats twelve measured runs per mode across six topics after warming up the shared memory. These results are offline measurements, not a claim about hosted latency. With a key and one datapack, the same pipeline can use live Meko through a local adapter.” |
+| 4:05–4:35 | Return to the brief and verified learning. | “We showed Challenge Eight with the comparison, Challenge Seven with a trace you can inspect, and Challenge Two with a verified learning the next run can use. Next we’d test retrieval on larger corpora and validate latency against authenticated Meko.” |
