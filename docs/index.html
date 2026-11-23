@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="An offline-first, observable multi-agent research workspace for ContextCon.">
+  <title>ContextCon Research Collective</title>
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="./styles.css">
+  <script type="module" src="./app.js"></script>
+</head>
+<body>
+  <header class="topbar">
+    <div class="shell masthead">
+      <a class="brand" href="./"><span class="brand-icon" aria-hidden="true">✳</span> <span>Research <b>Collective</b></span></a>
+      <nav aria-label="Workspace navigation"><a href="#workspace">Workspace</a><a href="#memory">Datapack</a></nav>
+      <span class="mode" id="mode"><i></i> <span id="mode-label">Demo mode</span></span>
+    </div>
+  </header>
+  <main class="shell" id="workspace">
+    <section class="hero">
+      <div class="eyebrow"><span>CONTEXTCON 2026</span><span class="eyebrow-divider"></span> CHALLENGE 08</div>
+      <h1>Research that <em>remembers.</em></h1>
+      <p>Four agents. One shared datapack. Compare what changes when agents retrieve what they need instead of replaying everything.</p>
+    </section>
+
+    <section class="card composer" aria-labelledby="ask-title">
+      <div class="section-kicker">01 / INPUT</div>
+      <h2 id="ask-title">Start a research run</h2>
+      <form id="ask">
+        <label class="sr-only" for="question">Research question</label>
+        <input id="question" required maxlength="500" placeholder="What would you like to research?">
+        <button type="submit" id="run">Run comparison <span aria-hidden="true">↗</span></button>
+      </form>
+      <div id="examples" aria-label="Seeded example questions"></div>
+      <p id="status" class="status" role="status">Pick a seeded topic to compare the same question with and without shared memory.</p>
+    </section>
+
+    <div class="section-heading">
+      <div><div class="section-kicker">02 / EXECUTION</div><h2>Agent pipeline</h2></div>
+      <span class="muted" id="datapack-label">ONE DATAPACK · FOUR AGENTS</span>
+    </div>
+    <ol id="pipeline" class="pipeline"></ol>
+
+    <section class="card comparison" aria-labelledby="compare-title">
+      <div class="section-kicker">03 / MEASUREMENT</div>
+      <div class="section-heading"><h2 id="compare-title">Shared memory vs. full replay</h2><strong class="delta" id="delta">Awaiting run</strong></div>
+      <div class="table-wrap"><table>
+        <thead><tr><th scope="col">Run mode</th><th scope="col">Estimated tokens</th><th scope="col">Time to brief</th><th scope="col">Evidence coverage</th></tr></thead>
+        <tbody>
+          <tr><th scope="row"><span class="dot shared"></span>Shared memory</th><td id="shared-tokens">—</td><td id="shared-latency">—</td><td id="shared-quality">—</td></tr>
+          <tr><th scope="row"><span class="dot"></span>Full replay</th><td id="baseline-tokens">—</td><td id="baseline-latency">—</td><td id="baseline-quality">—</td></tr>
+        </tbody>
+      </table></div>
+      <p class="muted footnote">Token estimates are not billed usage. Coverage checks seeded facts and citations, not general answer quality.</p>
+    </section>
+
+    <div class="results-grid">
+      <section class="card" aria-labelledby="brief-title">
+        <div class="section-kicker">04 / ARTIFACT</div><h2 id="brief-title">Research brief</h2>
+        <p id="artifact" class="muted">Version and datapack hash appear here after a run.</p>
+        <pre id="brief" class="brief">Your cited brief will appear here.</pre>
+        <a id="download" class="download" hidden>Download Markdown ↓</a>
+      </section>
+      <section class="card" aria-labelledby="retrieved-title">
+        <div class="section-kicker">05 / EVIDENCE</div><h2 id="retrieved-title">Retrieved context</h2>
+        <p class="muted">Relevance is a ranking signal, not verification.</p>
+        <div id="retrieved" class="scroll-panel"><p class="empty">Run a question to inspect hits by agent.</p></div>
+      </section>
+      <section class="card" aria-labelledby="trace-title">
+        <div class="section-kicker">06 / OBSERVABILITY</div><h2 id="trace-title">Decision trace</h2>
+        <label class="control-label" for="trace-mode">Inspect run</label>
+        <select id="trace-mode"><option value="shared">Shared memory</option><option value="baseline">Full replay</option></select>
+        <ol id="trace" class="timeline scroll-panel"><li class="empty">Tool calls, decisions, updates and token counts appear here.</li></ol>
+      </section>
+      <section id="memory" class="card" aria-labelledby="memory-title">
+        <div class="section-kicker">07 / DATAPACK</div><h2 id="memory-title">Shared-memory browser</h2>
+        <label class="control-label" for="memory-kind">Show</label>
+        <select id="memory-kind"><option value="memories">Memories</option><option value="learnings">Verified learnings</option><option value="knowledge">Knowledge</option></select>
+        <div id="memory-list" class="scroll-panel"></div>
+      </section>
+    </div>
+    <footer><span>RESEARCH COLLECTIVE / CONTEXTCON</span><span>Synthetic research · No model APIs</span></footer>
+  </main>
+</body>
+</html>
